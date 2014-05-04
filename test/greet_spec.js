@@ -1,4 +1,4 @@
-var greet = require("greet");
+greet = require("greet");
 
 describe('greet', function(){
   it("should greet a person by name", function(){
