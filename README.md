@@ -14,10 +14,31 @@ write
 `export NODE_PATH=/usr/local/lib/node_modules`  
 into ~/.bashrc  
 
-3. The [process object](http://nodejs.org/api/process.html#process_process) is ... Could be very useful.  
+3. There are two paths for npm. Gernal package install to $NODE_PATH may be better. Check [npm 1.0: Global vs Local installation](http://blog.nodejs.org/2011/03/23/npm-1-0-global-vs-local-installation)
 
-4. Node command line runtime may need to quit to refresh modules?  
+4. The [process object](http://nodejs.org/api/process.html#process_process) has lot of infomation. Could be very useful.  
 
-5. require is to get an entrance function of a package. A package is a module that has single objection. An executable in ./bin is separate from the module it self. But usually they have same purpose.  
+5. Node command line runtime may need to quit to refresh modules?  
 
+6. require is to get an entrance function of a package. A package is a module that has single objection. An executable in ./bin is separate from the module it self. But usually they have same purpose.  
+
+7. `npm install XXX --save-dev` is for dev using packages, like test.   
+   `npm install XXX --save` is for both dev and release.   
+   Also `npm link` can make local package global.   
+     
 ###Warmup 2  
+1. BDD：Behavior Driven Development. Using nature language to describe test case, and push development.  
+
+2. In browsers using `var something` will define a global variable. In Node using `global.XXX` to define a true top-level & cross-module global variable. `var something` inside a Node module will be local to that module.  
+
+3. ```js    
+describe('case/module name', function(){  
+  it("case 1 content", function(){  
+    expect(do sth).xx.xxx(output);
+  });
+  it("case 2 content", function(){  
+    expect(do sth).xx.xxx(output);
+  });
+  ....
+});
+```
