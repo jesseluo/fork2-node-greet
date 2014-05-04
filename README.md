@@ -31,7 +31,8 @@ into ~/.bashrc
 
 2. In browsers using `var something` will define a global variable. In Node using `global.XXX` to define a true top-level & cross-module global variable. `var something` inside a Node module will be local to that module.  
 
-3. ```js    
+3. Test Sample  
+```js    
 describe('case/module name', function(){  
   it("case 1 content", function(){  
     expect(do sth).xx.xxx(output);
@@ -42,3 +43,5 @@ describe('case/module name', function(){
   ....
 });
 ```
+
+###Warmup 3  
